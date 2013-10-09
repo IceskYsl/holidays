@@ -1,0 +1,6 @@
+<p>
+  <label><%=l(:setting_about_info)%></label>
+  <%= text_area_tag 'settings[HOLIDAYS_ABOUT]', (settings["HOLIDAYS_ABOUT"] || l(:text_worklogs_about)).force_encoding("utf-8"),:cols => 60, :rows => 25 %>
+  <br />
+  <em><%=l(:setting_about_info_desc)%></em>
+</p>

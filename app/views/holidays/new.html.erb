@@ -1,0 +1,16 @@
+<%=render :partial => "nav" %>
+
+<h2><%= l(:label_holiday_new) %></h2>
+
+
+<%= labelled_form_for @holiday, :url => holidays_path do |f| %>
+  <%= render :partial => 'form', :locals => {:f => f} %>
+  <%= submit_tag l(:button_create) %>
+<% end %>
+
+
+<% content_for :sidebar do %>
+	<%=render :partial => "sidebar" %>
+<% end %>
+
+<% html_title "#{l(:label_holiday_new)} - #{l(:label_holiday)}" %>

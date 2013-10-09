@@ -1,0 +1,52 @@
+
+<%=render :partial => "nav" %>
+<h2><%=l(:label_holidays)%></h2>
+
+<div class="contextual">
+
+<table class="cal">
+<thead>
+<tr><th scope="col" title="<%= l(:label_week) %>" class="week-number"></th><% 7.times do |i| %><th scope="col"><%= day_name( (@calendar.first_wday+i)%7 ) %></th><% end %></tr>
+</thead>
+<tbody>
+<tr>
+<% day = @calendar.startdt
+while day <= @calendar.enddt %>
+<%= ("<td class='week-number' title='#{ l(:label_week) }'>#{(day+(11-day.cwday)%7).cweek}</td>".html_safe) if day.cwday == @calendar.first_wday %>
+<td class="<%= day.month==@calendar.month ? 'even' : 'odd' %><%= ' today' if Date.today == day %>">
+<p class="day-num"><%= day.day %></p>
+<% @calendar.events_on(day).each do |i| %>
+  <div class="icon icon-package <%= i.css_classes %> <%= 'starting' if day == i.start_date %> <%= 'ending' if day == i.due_date %> tooltip">
+	  <%=link_to_user i.author %>
+	  <br />
+	  <%=truncate(i.mark,:length =>12) %>
+  <span class="tip"><%= render_holiday_tooltip i %></span>
+  </div>
+<% end %>
+</td>
+<%= '</tr><tr>'.html_safe if day.cwday==@calendar.last_wday and day!=@calendar.enddt %>
+<% day = day + 1
+end %>
+</tr>
+</tbody>
+</table>
+
+<p style="float:right;">
+  <%= link_to_previous_month(@year, @month) %> | <%= link_to_next_month(@year, @month) %>
+</p>
+
+
+<p class="legend cal">
+  <span class="starting"><%= l(:text_tip_holiday_begin_day) %></span>
+  <span class="ending"><%= l(:text_tip_holiday_end_day) %></span>
+  <span class="starting ending"><%= l(:text_tip_holiday_begin_end_day) %></span>
+</p>
+</div>
+
+
+
+<% content_for :sidebar do %>
+	<%=render :partial => "sidebar" %>
+<% end %>
+
+<% html_title(l(:label_holidays)) -%>
