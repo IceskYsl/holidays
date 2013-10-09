@@ -1,9 +1,15 @@
 #zh strings go here for Rails i18n
-zh:
-  label_holidays: "假期记录"
-  label_holiday_new: "添加假期记录"
-  label_holiday_my: "我的假期"
-  label_all_holiday: "全部假期"
-  text_tip_holiday_begin_day: "今天开始的假期"
-  text_tip_holiday_end_day: "今天结束的假期"
-  text_tip_holiday_begin_end_day: "今天开始并结束的假期"
+en:
+  label_holidays: "Holidays"
+  label_holiday_new: "Add Holiday"
+  label_holiday_my: "My Holidays"
+  label_all_holiday: "All Holidays"
+  text_tip_holiday_begin_day: "start at today"
+  text_tip_holiday_end_day: "due to today"
+  text_tip_holiday_begin_end_day: "start & due today"
+  field_mark: "Mark"
+  field_author: "who"
+  field_start_date: "Holiday Start at"
+  field_due_date: "Holiday Due to"
+  holiday_field_start_date: "Start Time"
+  holiday_field_due_date: "Due Time"

@@ -1,2 +1,9 @@
 <h3><%= l(:sidebar_about) %></h3>
 <%=textilizable (Setting.plugin_holidays['HOLIDAYS_ABOUT'] || "约定和说明,可定制").force_encoding("utf-8")%>
+
+
+<br />
+<hr />
+<p>
+<%=link_to "Holidays","https://github.com/IceskYsl/holidays" %>  is a plugin for <%=link_to "Redmine","http://www.redmine.org/" %>, developed by <%=link_to "Iceskysl@eoe","http://my.eoe.cn/iceskysl"%> 
+</p>
