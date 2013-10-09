@@ -15,7 +15,7 @@ To install the plugin, execute the following commands from the root of your Redm
 
 ```
 cd plugins
-git clone https://github.com/IceskYsl/holidays.git
+git clone git@github.com:IceskYsl/holidays.git
 ```
 
 and then execute the following commands from the root of your Redmine directory:
