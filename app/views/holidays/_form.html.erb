@@ -3,7 +3,14 @@
 <div class="box tabular">
 <p><%= l(:field_day) %>: <%=@day%></p>
 <p><%= f.select(:typee,  Holiday.typee_collection, {:class=>'wiki-edit',:required => true})%> </p>
-<p><%= f.text_field :start_date, :size => 20,  :required => true %><%= calendar_for('holiday_start_date') %></p>
-<p><%= f.text_field :due_date, :size => 20,  :required => true %><%= calendar_for('holiday_due_date') %></p>
+<p>
+	<%= f.text_field :start_date, :size => 20,  :required => true %><%= calendar_for('holiday_start_date') %> 
+	<%= f.time_select :start_time, :required => true %>
+</p>
+<p>
+	<%= f.text_field :due_date, :size => 20,  :required => true %><%= calendar_for('holiday_due_date') %>
+	<%= f.time_select :due_time, :required => true %>
+</p>
 <p><%= f.text_area :mark, :required => true, :cols => 40, :rows => 15, :class => 'wiki-edit' %></p>
+
 </div>

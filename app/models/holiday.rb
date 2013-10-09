@@ -16,6 +16,7 @@ class Holiday < ActiveRecord::Base
     s = "issue tracker-#{id} status-#{status}"
     s << ' closed' if closed?
     s << ' overdue' if overdue?
+    s << ' weeked' if weeked?
     s << ' private' if is_private?
     s << ' created-by-me' if User.current.logged? && user_id == User.current.id
     s
@@ -24,6 +25,10 @@ class Holiday < ActiveRecord::Base
   def closed?
     # self.status.is_closed?
     false
+  end
+  
+  def weeked?
+    self.start_date.sunday? 
   end
   
   # Returns true if the issue is overdue

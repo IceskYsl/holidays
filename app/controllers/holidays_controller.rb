@@ -18,7 +18,6 @@ class HolidaysController < ApplicationController
     # holidays_scope = Holiday.where("status = 0")
     holidays = Holiday.where("((start_date BETWEEN ? AND ?) OR (due_date BETWEEN ? AND ?))", @calendar.startdt, @calendar.enddt, @calendar.startdt, @calendar.enddt)
     events += holidays
-    puts "====#{events.size}"
     @calendar.events = events
   end
   
