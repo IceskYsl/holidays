@@ -1,3 +1,4 @@
+#encoding: utf-8
 class HolidaysController < ApplicationController
   model_object Holiday
   unloadable
