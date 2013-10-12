@@ -33,7 +33,7 @@ class Holiday < ActiveRecord::Base
   
   # Returns true if the issue is overdue
   def overdue?
-    !due_date.nil? && (due_date < Date.today) && !status.is_closed?
+    !due_date.nil? && (due_date < Date.today)
   end
   
   def is_private?
