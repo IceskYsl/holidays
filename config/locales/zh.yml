@@ -1,5 +1,6 @@
 #zh strings go here for Rails i18n
 zh:
+  label_menu_holidays: "假期记录"
   label_holidays: "假期记录"
   label_holiday_new: "添加假期记录"
   label_holiday_my: "我的假期"
