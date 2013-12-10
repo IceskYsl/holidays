@@ -14,3 +14,6 @@ zh:
   field_due_date: "假期结束时间"
   holiday_field_start_date: "开始时间"
   holiday_field_due_date: "结束时间"
+  
+  typee_0: "公司"
+  typee_1: "个人"

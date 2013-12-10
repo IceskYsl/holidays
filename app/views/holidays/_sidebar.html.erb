@@ -1,5 +1,5 @@
-<h3><%= l(:sidebar_about) %></h3>
-<%=textilizable (Setting.plugin_holidays['HOLIDAYS_ABOUT'] || "约定和说明,可定制").force_encoding("utf-8")%>
+<h3><%= l(:sidebar_holidays_about) %></h3>
+<%=textilizable (Setting.plugin_holidays['HOLIDAYS_ABOUT'] || l(:text_holidays_about)).force_encoding("utf-8")%>
 
 
 <br />
