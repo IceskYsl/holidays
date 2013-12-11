@@ -1,5 +1,6 @@
 #zh strings go here for Rails i18n
 en:
+  label_menu_holidays: "Holidays"
   label_holidays: "Holidays"
   label_holiday_new: "Add Holiday"
   label_holiday_my: "My Holidays"
@@ -13,3 +14,11 @@ en:
   field_due_date: "Holiday Due to"
   holiday_field_start_date: "Start Time"
   holiday_field_due_date: "Due Time"
+  
+  typee_0: "Work"
+  typee_1: "Private"
+  
+  sidebar_holidays_about: "Holidays"
+  text_holidays_about: "This message can be customized in the settings"
+  setting_about_info: "Holiday info message"
+  setting_about_info_desc: "This message will be displayed in the sidebar of the holiday plugin. It may contain instructions on how to use the plugin etc."

@@ -12,7 +12,7 @@ Redmine::Plugin.register :holidays do
     permission :new_holidays, :holidays => :new
   # end
   
-  menu :top_menu, :holidays, { :controller => 'holidays', :action => 'index' }, :caption => "假期记录"
+  menu :top_menu, :holidays, { :controller => 'holidays', :action => 'index' }, :caption => :label_menu_holidays
 
   # menu :application_menu, :worklogs, { :controller => 'worklogs', :action => 'index' }, :caption => :label_worklog
   # menu :application_menu, :worklogs_my, { :controller => 'worklogs', :action => 'my'}, :caption => :label_worklog_my ,:if => Proc.new { params[:controller] == "worklogs" }

@@ -4,8 +4,8 @@ class Holiday < ActiveRecord::Base
   belongs_to :author, :class_name => "User", :foreign_key => "user_id"
   
 
-  # TYPEE = {"公司" => 0,"个人" => 1}  
-  TYPEE = {"个人" => 1}
+  # TYPEE = {l(:typee_0) => 0,l(:typee_1) => 1}  
+  TYPEE = {l(:typee_1) => 1}
   
   def self.typee_collection
       TYPEE.collect { |s| [s[0], s[1]]}
